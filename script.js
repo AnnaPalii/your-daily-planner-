@@ -30,7 +30,11 @@ newRow.append(timeEl);
 
 // Create input row
 var taskDes = document.createElement("textarea");
-taskDes.setAttribute("id","box "+ workHours[i], "class", "col-md-10 description", "row", "2");
+taskDes.setAttribute("id","box "+ workHours[i]);
+taskDes.setAttribute("class", "col-md-10");
+taskDes.setAttribute("rows", "2");
+taskDes.setAttribute("cols", "2");
+// description textarea
 newRow.append(taskDes);
 
 // check if textarea has data saved in local storage
@@ -44,13 +48,13 @@ if (taskTitle !== null) {
 var currentTime = moment().format("HH");
 console.log(currentTime);
 if (currentTime == workHours[i]) {
-    taskDes.setAttribute("class", "present col-6 time-block");
+    taskDes.setAttribute("class", "present col-6");
 }
 if (currentTime < workHours[i]) {
-    taskDes.setAttribute("class", "future col-6 time-block");
+    taskDes.setAttribute("class", "future col-6");
 }
 if (currentTime > workHours[i]) {
-    taskDes.setAttribute("class", "past col-6 time-block");
+    taskDes.setAttribute("class", "past col-6");
 }
 
 // Create save btn
