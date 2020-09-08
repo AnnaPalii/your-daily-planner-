@@ -7,7 +7,7 @@ currentDate.append(currentDateEl);
 // Add time blocks to display work hours 
 var workHours = [9,10,11,12,13,14,15,16,17];
 var hourBlock = document.getElementById("container"); 
-hourBlock.setAttribute("class", " ");
+hourBlock.setAttribute("class", "clearfix");
 console.log(hourBlock);
 
 for (var i = 0; i < workHours.length; i++) {
