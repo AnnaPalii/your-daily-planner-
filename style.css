@@ -74,4 +74,5 @@ body {
 #container {
   line-height: 3;
   text-align: center;
+  margin: auto;
 }
